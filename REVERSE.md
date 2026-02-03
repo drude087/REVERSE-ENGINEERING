@@ -43,7 +43,7 @@ puts("Access denied"Access denied
 
 we can see that it is comparing the enterted value to ```picoCTF{3lf_r3v3r5ing_succe55ful```
 
-## Retrying with data we got
+## Retrying with the data we got
 ```bash
 ./ret 
 Enter the password to unlock this file: picoCTF{3lf_r3v3r5ing_succe55ful
@@ -112,4 +112,5 @@ picoCTF{3lf_r3v3r5ing_succe55ful_c83965d
 <img src="IMAGES\FLAG REVERSE.png" width="600">
 
 ## Conclusion
+
 The challenge can be solved trivially by reverse engineering due to the presence of hardcoded validation logic in the binary. No dynamic checks, obfuscation, or server-side validation mechanisms are used, making the flag easily retrievable through static analysis rather than exploitation or guessing.
