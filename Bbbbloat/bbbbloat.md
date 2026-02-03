@@ -82,7 +82,7 @@ lseek(0, -1, SEEK_CUR)                  = -1 ESPIPE (Illegal seek)
 exit_group(0)                           = ?
 +++ exited with 0 +++
 ```
-
+<img src="IMAGES\strace.png" width="600">
 Lets open up the binary in Gidra to see whats going on and what the full data is
 
 ## Ghidra
@@ -155,3 +155,4 @@ picoCTF{cu7_7h3_bl047_36dd316a}
 
 
 The binary prompts the user to guess a favorite number and reveals the flag on correct input. Static analysis using Ghidra shows that the program directly compares the user input against a hardcoded hexadecimal constant (0x86187). Converting this value to decimal and supplying it as input satisfies the condition and triggers the flag output. Since the correct value is embedded directly in the binary and no dynamic or protected validation is performed, the challenge can be solved trivially through reverse engineering rather than guessing or exploitation.
+
