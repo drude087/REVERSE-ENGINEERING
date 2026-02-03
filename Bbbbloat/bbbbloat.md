@@ -21,7 +21,7 @@ Sorry that's not it!
 file bbbbloat 
 bbbbloat: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=7f6577a0ee7bbb89247a73c7de24236acb749cee, for GNU/Linux 3.2.0, stripped                                                              
 ```
-<img src="IMAGES\file type.png" width="600" height="20">
+<img src="IMAGES\file type.png" width="3600" height="40">
 It is stripped which means we can't see the code details clearly
 
 ## Ltrace
@@ -155,4 +155,5 @@ picoCTF{cu7_7h3_bl047_36dd316a}
 
 
 The binary prompts the user to guess a favorite number and reveals the flag on correct input. Static analysis using Ghidra shows that the program directly compares the user input against a hardcoded hexadecimal constant (0x86187). Converting this value to decimal and supplying it as input satisfies the condition and triggers the flag output. Since the correct value is embedded directly in the binary and no dynamic or protected validation is performed, the challenge can be solved trivially through reverse engineering rather than guessing or exploitation.
+
 
